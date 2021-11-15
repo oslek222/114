@@ -1,0 +1,201 @@
+def is_anagram(string_a, string_b):
+    if len(string_a) != len(string_b):
+        return False
+    
+    string_a = string_a.upper()
+    string_b = string_b.upper()
+    string_a = string_a.replace(" ", "")
+    string_b = string_b.replace(" ", "")
+    char_times_a = dict() # {"c": 1, "a": 1, "r": 1, "s": 1}
+    char_times_b = dict() # {"s": 1, "c": 1, "a": 1, "r": 1}
+    for i in range(len(string_a)):
+        if string_a[i] not in char_times_a.keys():
+            char_times_a[string_a[i]] = 1
+        else:
+            char_times_a[string_a[i]] += 1
+        if string_b[i] not in char_times_b.keys():
+            char_times_b[string_a[i]] = 1
+        else:
+            char_times_b[string_a[i]] += 1
+    return char_times_a == char_times_b
+
+
+
+# declare function -> parameters: [string_a, string_b]
+# if string_a is not of the same lenght of string_b:
+# return False
+# check if they use exactly the same characters
+
+False
+
+is_anagram("cars", "scar")
+
+True
+
+class Stack:
+    def_init_(self):
+        self.items = []
+
+    def push(self, item):
+        self.items.append(item)
+
+    def pop(self):
+        return self.items.pop()
+
+    def peek(self):
+        return self.items[len(self.items)-1]
+
+    def size(self):
+        return len(self.items)
+
+    def is_empty(self):
+        return self.items == []
+
+
+
+mystack = Stack()
+
+for number in range (0, 10):
+    mystack.push(number)
+
+print("My stack size: %s" % mystack.size())
+
+while not mystack.is_empty():
+    print(mystack.pop())
+
+Mysstack size: 10
+9
+8
+7
+6
+5
+4
+3
+2
+1
+0
+
+
+def reverse(mystring):
+    output = ""
+    stack = Stack()
+    for character in mystring:
+        stack.push(character)
+    while not stack.is_empty():
+        output += stack.pop()
+    return output
+
+print(reverse("Rafael"))
+
+
+
+some_variable = []
+some_variable == []
+
+
+
+x = 1
+y = 2
+
+x == y
+x != Y
+
+y < z
+y > z
+
+
+
+
+
+
+
+
+def lower(character):
+    code = ord(character)
+    if (code < 65) or (code > 97):
+        raise Exception("Character out of bounds!")
+    if (code > 65) and (code < 97):
+        print("hey!")
+    return chr(code+32)
+
+for character in "ABCDEFG":
+    print(lower(character))
+
+def replace(the_string, the_target, the_replacement):
+    output = ""
+    for character in the_string:
+        if character == the_target:
+            output += the_replacement
+        else:
+            output += character
+    return output
+
+replace("Rafael", "a", "x")
+
+a
+b
+c
+d
+e
+f
+g
+
+'Rxfxel'
+
+
+
+
+
+
+
+upper: A -> lower a
+upper: B -> lower b
+upper: C -> lower c
+upper: D -> lower d
+upper: E -> lower e
+upper: F -> lower f
+upper: G -> lower g
+upper: H -> lower h
+upper: I -> lower i
+upper: J -> lower j
+upper: K -> lower k
+upper: L -> lower l
+upper: M -> lower m
+upper: N -> lower n
+upper: O -> lower o
+upper: P -> lower p
+upper: Q -> lower q
+upper: R -> lower r
+upper: S -> lower s
+upper: T -> lower t
+upper: U -> lower u
+upper: V -> lower v
+upper: W -> lower w
+upper: X -> lower x
+upper: Y -> lower y
+upper: Z -> lower z
+
+
+
+from string import ascii_lowercase
+from random import randint, choice
+from time import sleep
+
+def register_visitors(visitor_queue):
+    for char in ascii_lowercase:
+
+def service_customers(visitor_queue):
+    bank_tellers=["A", "B", "C", "D", "E", "F", "G"]
+    while not visitor_queue.is_empty():
+        visitor = visitor_queue.dequeue()
+        print("thank you for waiting %s, station %s is ready for you.")
+            % (visitor, choice(bank_tellers)))
+            sleep(randint(1,2))
+        print("empty visitor queue.")
+
+def main():
+    visitor_queue = Queue()
+    register_visitors(visitor_queue)
+    service_customers(visitor_queue)
+
+    
